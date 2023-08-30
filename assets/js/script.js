@@ -6,18 +6,19 @@ Data una lista della spesa, stampare sulla pagina (anche brutalmente, basta che 
 
 */
 
-listaSpesa = ['pasta', 'pomodori', 'prosciutto', 'formaggio', 'snack', 'latte']
-console.log(listaSpesa);
+ const listaSpesa = ['pasta', 'pomodori', 'prosciutto', 'formaggio', 'snack', 'latte']
+//console.log(listaSpesa);
 
 //DOM
-const ulEl = document.createElement('ul');
+const ulEl = document.getElementById('listaspesa');
 
-i = 0
-while (i < listaSpesa.length) {
+let i = 0;
+
+while(i < listaSpesa.length){
     
-    const el =  listaSpesa[i]
-    console.log(el);
-    
-    
+    const liEL = document.createElement('li');
+    liEL.append(listaSpesa[i]);
+    ulEl.append(liEL);
+
     i++
-}
+} 
